@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../assets/css/login.css">
+    
+</head>
+<body>
+    <div class = "container">
+       
+        <img src="../assets/img/physioLOGO.png" alt="">
+      
+       
+        <form id = 'mainform' novalidate>
+       
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" 
+                placeholder="" 
+                autocomplete="off"><i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" 
+                placeholder="Email" 
+                autocomplete="off"><i class="icon"></i>
+            </div>
+
+            
+            <div class="form-control">
+                <label for="telefone">Telefone</label>
+                <input type="tel" name="telefone" id="tel" 
+                placeholder="+55" 
+                autocomplete="off"><i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="pwd" 
+                placeholder="6+ caracteres" 
+                autocomplete="off"><i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="senha">Fale um pouco sobre você:</label>
+                <textarea maxlength="100" name="mensagem" id="message" placeholder="Mensagem" autocomplete="off"></textarea> <i class="i"></i>
+                
+            </div>
+            
+
+            <div class="form-container">
+                <input type="checkbox" id="user-terms" name="user-terms">
+                <label for="user-terms">Li e concordo com os <a href="www.facebook.com">Termos de serviço</a> e <a href="twitter.com">Políticas de privacidade</a> </label>
+    <button>Sign In</button>
+    <span>Nov@ no PhysioSync? <a href="">Crie uma conta!</a></span>
+</div>
+   
+
+    </form>   
+      
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Sucesso!</h2>
+        <p>Seu formulário foi enviado!</p>
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>
