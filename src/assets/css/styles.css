@@ -7,10 +7,7 @@ body {
     overflow-x: hidden; /* Evita a rolagem lateral */
 }
 
-header, .card-slider, .section1, .select-pro, .ad, .workwithus-container, .feedback-container {
-    max-width: 100%;
-    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
-}
+
 
 header {
     background-color: transparent;
@@ -23,7 +20,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 100%;
 }
 
 .logo {
@@ -74,7 +71,7 @@ nav {
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     margin: 0;
     margin-left: 20px;
 }
