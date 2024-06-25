@@ -4,6 +4,12 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to bottom, #0894B3, white);
     padding: 40px;
+    overflow-x: hidden; /* Evita a rolagem lateral */
+}
+
+header, .card-slider, .section1, .select-pro, .ad, .workwithus-container, .feedback-container {
+    max-width: 100%;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
 }
 
 header {
@@ -17,7 +23,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
 }
 
 .logo {
@@ -184,7 +190,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 110%;
+    width: 100%;
     display: flex;
     overflow-x: hidden;
     gap: 10px;
@@ -218,6 +224,18 @@ footer {
     border-radius: 10px;
     object-fit: cover; 
 }
+
+.feedback-container, .workwithus-container {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.workwithus-container {
+    position: relative;
+    width: 100%;
+}
+
 
 .card-title {
     font-size: 1rem;
