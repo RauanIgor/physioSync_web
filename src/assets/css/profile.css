@@ -2,7 +2,7 @@ body {
     margin: 0; 
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(to bottom, #0894B3, white);
-    padding: 40px;
+    padding: 0 40px ; 
 }
 
 header {
