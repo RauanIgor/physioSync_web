@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 15px/24px "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+}
+
+
+body {
+    background-color: var(--md-sys-color-on-primary);
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100dvh;
+    padding: 0 1rem;
+    overflow-y: scroll;
+}
+
+body h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.container {
+    
+    border-radius: 3px;
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    max-width: 920px;
+    padding: 1.2rem;
+    box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.212);
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* PRA DAR ESPAÇAMENTO ENTRE COLUNAS E LINHAS */
+}
+
+
+.container img {
+    width: 50%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+@media (max-width: 700px) {
+    .container img {
+      /* Estilos para a imagem quando a largura da div for menor que 600px */
+      display: none; /* Esconde a imagem */
+    }
+  }
+  
+.container form {
+    width: 100%;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.form-control {
+   
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    min-width: 250px;
+    
+}
+
+.form-control label{
+    display: block; 
+    font-weight: bold;
+    text-align: left;
+
+}
+
+.form-control input,
+.form-control textarea{
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 5px;
+    padding-right: 40px;
+    outline: none;
+    font-size: 2svh;
+    resize: none;
+    
+}
+
+.form-control input.input-selected,
+.form-control textarea.input-selected {
+   
+    border: 2px solid lightblue;
+    
+}
+
+.form-control  input.mouse-on-input,
+.form-control textarea.mouse-on-input{
+    box-shadow: 1px 1px 12px 1px lightblue;
+}
+
+@keyframes borderGreen {
+    from {
+        border-color: #ccc; /* Cor inicial da borda */
+    }
+    to {
+        border-color: #488237; /* Cor final da borda */
+    }
+}
+
+@keyframes borderRed {
+    from {
+        border-color: #ccc; /* Cor inicial da borda */
+    }
+    to {
+        border-color: #ac5452; /* Cor final da borda */
+    }
+}
+
+.form-control.success input,
+.form-control.success textarea {
+    animation: borderGreen 0.5s forwards; /* 0.5s é a duração da animação */
+    border-width: 2px;
+}
+
+.form-control.error input,
+.form-control.error textarea {
+    animation: borderRed 0.5s forwards;
+    border-width: 2px;
+}
+
+
+.form-container button {
+    background-color: #2573eb;
+    border-radius: 2rem;
+    padding: 10px 24px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out;
+    width: 100%;
+}
+
+.form-container button:hover{
+    background-color: rgb(80, 148, 201);
+    color: white;
+  
+}
+
+.form-container label, input {
+    flex-direction: row;
+}
+
+.form-container button, span{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.form-container a {
+    color: black;
+}
+
+
+
+ 
+
+
+.modal {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    z-index: 1;
+    right: 20px;
+    bottom: 20px;
+   
+ 
+ 
+    /* Fundo semitransparente */
+    justify-content: center;
+    align-items: center;
+   /* Espaçamento interno */
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Movimento para baixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    animation: fadeIn 0.5s
+}
+
+.modal-content h2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+}
+
+.modal-content p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.75rem;
+}
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-control .icon{
+    position: absolute;
+    right: 10px;
+    top: 71%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: transparent;
+    pointer-events: none;
+}
+
+.form-control.success .icon{
+    color: #2ecc71;
+}
